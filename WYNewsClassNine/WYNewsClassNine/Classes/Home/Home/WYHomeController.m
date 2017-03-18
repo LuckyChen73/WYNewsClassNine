@@ -19,8 +19,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.automaticallyAdjustsScrollViewInsets = NO;
     
     [self addChannelView];
+    
+    
     
     
 }
@@ -31,7 +34,6 @@
 {
     WYChannelView *view = [[WYChannelView alloc]init];
     
-    view.backgroundColor = [UIColor yellowColor];
     
     [self.view addSubview:view];
     

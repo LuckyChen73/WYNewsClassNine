@@ -20,6 +20,7 @@
 		1FFFC9251E7D5AF000152D56 /* WYChannelView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFFC9241E7D5AF000152D56 /* WYChannelView.m */; };
 		1FFFC9281E7D5C4000152D56 /* WYChannelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFFC9271E7D5C4000152D56 /* WYChannelModel.m */; };
 		1FFFC92A1E7D5D6600152D56 /* topic_news.json in Resources */ = {isa = PBXBuildFile; fileRef = 1FFFC9291E7D5D6600152D56 /* topic_news.json */; };
+		1FFFC92D1E7D5F6000152D56 /* WYLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFFC92C1E7D5F6000152D56 /* WYLabel.m */; };
 		A6F38BD391FE8A42B7C6CC9A /* libPods-WYNewsClassNine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6225DC3B9AB8816B8B346F67 /* libPods-WYNewsClassNine.a */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,8 @@
 		1FFFC9261E7D5C4000152D56 /* WYChannelModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYChannelModel.h; sourceTree = "<group>"; };
 		1FFFC9271E7D5C4000152D56 /* WYChannelModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYChannelModel.m; sourceTree = "<group>"; };
 		1FFFC9291E7D5D6600152D56 /* topic_news.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = topic_news.json; sourceTree = "<group>"; };
+		1FFFC92B1E7D5F6000152D56 /* WYLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYLabel.h; sourceTree = "<group>"; };
+		1FFFC92C1E7D5F6000152D56 /* WYLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYLabel.m; sourceTree = "<group>"; };
 		42A4536E5A6A0378A1049D3F /* Pods-WYNewsClassNine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WYNewsClassNine.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WYNewsClassNine/Pods-WYNewsClassNine.debug.xcconfig"; sourceTree = "<group>"; };
 		6225DC3B9AB8816B8B346F67 /* libPods-WYNewsClassNine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WYNewsClassNine.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A07371517C299628ABA2A5A7 /* Pods-WYNewsClassNine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WYNewsClassNine.release.xcconfig"; path = "Pods/Target Support Files/Pods-WYNewsClassNine/Pods-WYNewsClassNine.release.xcconfig"; sourceTree = "<group>"; };
@@ -218,6 +221,8 @@
 			isa = PBXGroup;
 			children = (
 				1FFFC9291E7D5D6600152D56 /* topic_news.json */,
+				1FFFC92B1E7D5F6000152D56 /* WYLabel.h */,
+				1FFFC92C1E7D5F6000152D56 /* WYLabel.m */,
 				1FFFC9261E7D5C4000152D56 /* WYChannelModel.h */,
 				1FFFC9271E7D5C4000152D56 /* WYChannelModel.m */,
 			);
@@ -375,6 +380,7 @@
 				1FFFC9181E7D51BE00152D56 /* WYHomeController.m in Sources */,
 				1FFFC9281E7D5C4000152D56 /* WYChannelModel.m in Sources */,
 				1FFFC9121E7D504D00152D56 /* WYMainViewController.m in Sources */,
+				1FFFC92D1E7D5F6000152D56 /* WYLabel.m in Sources */,
 				1FFFC9151E7D51AE00152D56 /* WYChannelController.m in Sources */,
 				1FFFC8F51E7D0A3A00152D56 /* AppDelegate.m in Sources */,
 				1FFFC8F21E7D0A3A00152D56 /* main.m in Sources */,

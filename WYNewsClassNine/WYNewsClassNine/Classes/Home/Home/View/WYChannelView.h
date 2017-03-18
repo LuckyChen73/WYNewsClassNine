@@ -10,4 +10,7 @@
 
 @interface WYChannelView : UIScrollView
 
+@property (nonatomic, strong) NSArray *modelArr;
+
+
 @end
