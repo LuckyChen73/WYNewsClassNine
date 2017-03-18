@@ -8,6 +8,7 @@
 
 #import "WYHomeController.h"
 #import <Masonry.h>
+#import "WYChannelView.h"
 
 @interface WYHomeController ()
 
@@ -28,7 +29,7 @@
 //添加频道视图
 - (void)addChannelView
 {
-    UIScrollView *view = [[UIScrollView alloc]init];
+    WYChannelView *view = [[WYChannelView alloc]init];
     
     view.backgroundColor = [UIColor yellowColor];
     
