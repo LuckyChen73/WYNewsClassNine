@@ -1,0 +1,506 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1FFFC8F21E7D0A3A00152D56 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFFC8F11E7D0A3A00152D56 /* main.m */; };
+		1FFFC8F51E7D0A3A00152D56 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFFC8F41E7D0A3A00152D56 /* AppDelegate.m */; };
+		1FFFC8FB1E7D0A3A00152D56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FFFC8F91E7D0A3A00152D56 /* Main.storyboard */; };
+		1FFFC8FD1E7D0A3A00152D56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FFFC8FC1E7D0A3A00152D56 /* Assets.xcassets */; };
+		1FFFC9001E7D0A3A00152D56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FFFC8FE1E7D0A3A00152D56 /* LaunchScreen.storyboard */; };
+		A6F38BD391FE8A42B7C6CC9A /* libPods-WYNewsClassNine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6225DC3B9AB8816B8B346F67 /* libPods-WYNewsClassNine.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1FFFC8ED1E7D0A3A00152D56 /* WYNewsClassNine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WYNewsClassNine.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1FFFC8F11E7D0A3A00152D56 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1FFFC8F31E7D0A3A00152D56 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		1FFFC8F41E7D0A3A00152D56 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		1FFFC8FA1E7D0A3A00152D56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		1FFFC8FC1E7D0A3A00152D56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1FFFC8FF1E7D0A3A00152D56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1FFFC9011E7D0A3A00152D56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42A4536E5A6A0378A1049D3F /* Pods-WYNewsClassNine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WYNewsClassNine.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WYNewsClassNine/Pods-WYNewsClassNine.debug.xcconfig"; sourceTree = "<group>"; };
+		6225DC3B9AB8816B8B346F67 /* libPods-WYNewsClassNine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WYNewsClassNine.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A07371517C299628ABA2A5A7 /* Pods-WYNewsClassNine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WYNewsClassNine.release.xcconfig"; path = "Pods/Target Support Files/Pods-WYNewsClassNine/Pods-WYNewsClassNine.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1FFFC8EA1E7D0A3A00152D56 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6F38BD391FE8A42B7C6CC9A /* libPods-WYNewsClassNine.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03557BD9CBC0EE6FB17D6AF6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				42A4536E5A6A0378A1049D3F /* Pods-WYNewsClassNine.debug.xcconfig */,
+				A07371517C299628ABA2A5A7 /* Pods-WYNewsClassNine.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		1FFFC8E41E7D0A3A00152D56 = {
+			isa = PBXGroup;
+			children = (
+				1FFFC8EF1E7D0A3A00152D56 /* WYNewsClassNine */,
+				1FFFC8EE1E7D0A3A00152D56 /* Products */,
+				03557BD9CBC0EE6FB17D6AF6 /* Pods */,
+				F8CACE598116DF775CC9879D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		1FFFC8EE1E7D0A3A00152D56 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1FFFC8ED1E7D0A3A00152D56 /* WYNewsClassNine.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1FFFC8EF1E7D0A3A00152D56 /* WYNewsClassNine */ = {
+			isa = PBXGroup;
+			children = (
+				1FFFC9071E7D47FA00152D56 /* Classes */,
+				1FFFC8F31E7D0A3A00152D56 /* AppDelegate.h */,
+				1FFFC8F41E7D0A3A00152D56 /* AppDelegate.m */,
+				1FFFC8F91E7D0A3A00152D56 /* Main.storyboard */,
+				1FFFC8FC1E7D0A3A00152D56 /* Assets.xcassets */,
+				1FFFC8FE1E7D0A3A00152D56 /* LaunchScreen.storyboard */,
+				1FFFC9011E7D0A3A00152D56 /* Info.plist */,
+				1FFFC8F01E7D0A3A00152D56 /* Supporting Files */,
+			);
+			path = WYNewsClassNine;
+			sourceTree = "<group>";
+		};
+		1FFFC8F01E7D0A3A00152D56 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1FFFC8F11E7D0A3A00152D56 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1FFFC9071E7D47FA00152D56 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1FFFC9081E7D47FA00152D56 /* Home */,
+				1FFFC90D1E7D47FA00152D56 /* Main */,
+				1FFFC90E1E7D47FA00152D56 /* ThirdLib */,
+				1FFFC90F1E7D47FA00152D56 /* Tool */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		1FFFC9081E7D47FA00152D56 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				1FFFC9091E7D47FA00152D56 /* ChannelView */,
+				1FFFC90A1E7D47FA00152D56 /* Home */,
+				1FFFC90B1E7D47FA00152D56 /* NewDetail */,
+				1FFFC90C1E7D47FA00152D56 /* NewList */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		1FFFC9091E7D47FA00152D56 /* ChannelView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ChannelView;
+			sourceTree = "<group>";
+		};
+		1FFFC90A1E7D47FA00152D56 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		1FFFC90B1E7D47FA00152D56 /* NewDetail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NewDetail;
+			sourceTree = "<group>";
+		};
+		1FFFC90C1E7D47FA00152D56 /* NewList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NewList;
+			sourceTree = "<group>";
+		};
+		1FFFC90D1E7D47FA00152D56 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		1FFFC90E1E7D47FA00152D56 /* ThirdLib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ThirdLib;
+			sourceTree = "<group>";
+		};
+		1FFFC90F1E7D47FA00152D56 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		F8CACE598116DF775CC9879D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6225DC3B9AB8816B8B346F67 /* libPods-WYNewsClassNine.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1FFFC8EC1E7D0A3A00152D56 /* WYNewsClassNine */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1FFFC9041E7D0A3A00152D56 /* Build configuration list for PBXNativeTarget "WYNewsClassNine" */;
+			buildPhases = (
+				0D6BF9E3EE5CBEC6B8493110 /* [CP] Check Pods Manifest.lock */,
+				1FFFC8E91E7D0A3A00152D56 /* Sources */,
+				1FFFC8EA1E7D0A3A00152D56 /* Frameworks */,
+				1FFFC8EB1E7D0A3A00152D56 /* Resources */,
+				D977BFB1D390CA601517DFAD /* [CP] Embed Pods Frameworks */,
+				A770E9E3F774412834C0C302 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WYNewsClassNine;
+			productName = WYNewsClassNine;
+			productReference = 1FFFC8ED1E7D0A3A00152D56 /* WYNewsClassNine.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1FFFC8E51E7D0A3A00152D56 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "陈伟";
+				TargetAttributes = {
+					1FFFC8EC1E7D0A3A00152D56 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 1FFFC8E81E7D0A3A00152D56 /* Build configuration list for PBXProject "WYNewsClassNine" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1FFFC8E41E7D0A3A00152D56;
+			productRefGroup = 1FFFC8EE1E7D0A3A00152D56 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1FFFC8EC1E7D0A3A00152D56 /* WYNewsClassNine */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1FFFC8EB1E7D0A3A00152D56 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FFFC9001E7D0A3A00152D56 /* LaunchScreen.storyboard in Resources */,
+				1FFFC8FD1E7D0A3A00152D56 /* Assets.xcassets in Resources */,
+				1FFFC8FB1E7D0A3A00152D56 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0D6BF9E3EE5CBEC6B8493110 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A770E9E3F774412834C0C302 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WYNewsClassNine/Pods-WYNewsClassNine-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D977BFB1D390CA601517DFAD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WYNewsClassNine/Pods-WYNewsClassNine-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1FFFC8E91E7D0A3A00152D56 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1FFFC8F51E7D0A3A00152D56 /* AppDelegate.m in Sources */,
+				1FFFC8F21E7D0A3A00152D56 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1FFFC8F91E7D0A3A00152D56 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1FFFC8FA1E7D0A3A00152D56 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1FFFC8FE1E7D0A3A00152D56 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1FFFC8FF1E7D0A3A00152D56 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1FFFC9021E7D0A3A00152D56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1FFFC9031E7D0A3A00152D56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1FFFC9051E7D0A3A00152D56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42A4536E5A6A0378A1049D3F /* Pods-WYNewsClassNine.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = WYNewsClassNine/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"Masonry\"",
+					"-l\"SDWebImage\"",
+					"-l\"YYModel\"",
+					"-framework",
+					"\"CoreFoundation\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.--.WYNewsClassNine";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1FFFC9061E7D0A3A00152D56 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A07371517C299628ABA2A5A7 /* Pods-WYNewsClassNine.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = WYNewsClassNine/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"Masonry\"",
+					"-l\"SDWebImage\"",
+					"-l\"YYModel\"",
+					"-framework",
+					"\"CoreFoundation\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.--.WYNewsClassNine";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1FFFC8E81E7D0A3A00152D56 /* Build configuration list for PBXProject "WYNewsClassNine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FFFC9021E7D0A3A00152D56 /* Debug */,
+				1FFFC9031E7D0A3A00152D56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1FFFC9041E7D0A3A00152D56 /* Build configuration list for PBXNativeTarget "WYNewsClassNine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FFFC9051E7D0A3A00152D56 /* Debug */,
+				1FFFC9061E7D0A3A00152D56 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1FFFC8E51E7D0A3A00152D56 /* Project object */;
+}
