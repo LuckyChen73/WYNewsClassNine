@@ -116,6 +116,17 @@ const int baseTag = 6866;
     //把将要选中的 lab 选中状态改为 yes
     willSelectLab.isSelected = YES;
     
+    
+    //如果选中高亮的 lab 超出屏幕，则让它滚动到可视区域
+    CGFloat originX = willSelectLab.frame.origin.x;
+    CGFloat rightX = willSelectLab.frame.origin.x + willSelectLab.bounds.size.width;
+    
+    if (originX < self.contentOffset.x || rightX > self.contentOffset.x) {
+        
+        [self scrollRectToVisible:willSelectLab.frame animated:YES];
+    }
+    
+    
     //把当前选中的 lab 的下标赋值给原来的选中 lab 的下标
     _isSelectedIndex = isSelectedIndex;
     
