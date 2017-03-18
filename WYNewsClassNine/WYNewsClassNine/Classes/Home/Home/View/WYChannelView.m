@@ -26,6 +26,8 @@
 
 - (void)setupUI
 {
+    self.bounces = NO;
+    
     self.backgroundColor = [UIColor whiteColor];
     
     //取消滚动条
