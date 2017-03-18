@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "WYMainViewController.h"
 
 @interface AppDelegate ()
 
@@ -18,14 +19,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     _window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+
+    WYMainViewController *mainVC = [[WYMainViewController alloc] init];
     
-    UIViewController *vc = [[UIViewController alloc] init];
+    _window.rootViewController = mainVC;
     
-    vc.view.backgroundColor = [UIColor redColor];
-    
-    _window.rootViewController = [[UINavigationController alloc] initWithRootViewController:vc];
-    
-    
+    [_window makeKeyAndVisible];
     
     return YES;
 }

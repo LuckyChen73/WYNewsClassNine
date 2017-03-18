@@ -12,6 +12,11 @@
 		1FFFC8FB1E7D0A3A00152D56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FFFC8F91E7D0A3A00152D56 /* Main.storyboard */; };
 		1FFFC8FD1E7D0A3A00152D56 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FFFC8FC1E7D0A3A00152D56 /* Assets.xcassets */; };
 		1FFFC9001E7D0A3A00152D56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FFFC8FE1E7D0A3A00152D56 /* LaunchScreen.storyboard */; };
+		1FFFC9121E7D504D00152D56 /* WYMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFFC9111E7D504D00152D56 /* WYMainViewController.m */; };
+		1FFFC9151E7D51AE00152D56 /* WYChannelController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFFC9141E7D51AE00152D56 /* WYChannelController.m */; };
+		1FFFC9181E7D51BE00152D56 /* WYHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFFC9171E7D51BE00152D56 /* WYHomeController.m */; };
+		1FFFC91B1E7D51CD00152D56 /* WYDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFFC91A1E7D51CD00152D56 /* WYDetailController.m */; };
+		1FFFC91E1E7D51E000152D56 /* WYNewsListController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFFC91D1E7D51E000152D56 /* WYNewsListController.m */; };
 		A6F38BD391FE8A42B7C6CC9A /* libPods-WYNewsClassNine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6225DC3B9AB8816B8B346F67 /* libPods-WYNewsClassNine.a */; };
 /* End PBXBuildFile section */
 
@@ -24,6 +29,16 @@
 		1FFFC8FC1E7D0A3A00152D56 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1FFFC8FF1E7D0A3A00152D56 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1FFFC9011E7D0A3A00152D56 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FFFC9101E7D504D00152D56 /* WYMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYMainViewController.h; sourceTree = "<group>"; };
+		1FFFC9111E7D504D00152D56 /* WYMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYMainViewController.m; sourceTree = "<group>"; };
+		1FFFC9131E7D51AE00152D56 /* WYChannelController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYChannelController.h; sourceTree = "<group>"; };
+		1FFFC9141E7D51AE00152D56 /* WYChannelController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYChannelController.m; sourceTree = "<group>"; };
+		1FFFC9161E7D51BE00152D56 /* WYHomeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WYHomeController.h; path = ../WYHomeController.h; sourceTree = "<group>"; };
+		1FFFC9171E7D51BE00152D56 /* WYHomeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WYHomeController.m; path = ../WYHomeController.m; sourceTree = "<group>"; };
+		1FFFC9191E7D51CD00152D56 /* WYDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYDetailController.h; sourceTree = "<group>"; };
+		1FFFC91A1E7D51CD00152D56 /* WYDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYDetailController.m; sourceTree = "<group>"; };
+		1FFFC91C1E7D51E000152D56 /* WYNewsListController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYNewsListController.h; sourceTree = "<group>"; };
+		1FFFC91D1E7D51E000152D56 /* WYNewsListController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYNewsListController.m; sourceTree = "<group>"; };
 		42A4536E5A6A0378A1049D3F /* Pods-WYNewsClassNine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WYNewsClassNine.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WYNewsClassNine/Pods-WYNewsClassNine.debug.xcconfig"; sourceTree = "<group>"; };
 		6225DC3B9AB8816B8B346F67 /* libPods-WYNewsClassNine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WYNewsClassNine.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A07371517C299628ABA2A5A7 /* Pods-WYNewsClassNine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WYNewsClassNine.release.xcconfig"; path = "Pods/Target Support Files/Pods-WYNewsClassNine/Pods-WYNewsClassNine.release.xcconfig"; sourceTree = "<group>"; };
@@ -94,72 +109,122 @@
 		1FFFC9071E7D47FA00152D56 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				1FFFC9081E7D47FA00152D56 /* Home */,
-				1FFFC90D1E7D47FA00152D56 /* Main */,
-				1FFFC90E1E7D47FA00152D56 /* ThirdLib */,
-				1FFFC90F1E7D47FA00152D56 /* Tool */,
+				1FFFC9081E7D47FA00152D56 /* Home（主页模型） */,
+				1FFFC90D1E7D47FA00152D56 /* Main（主框架） */,
+				1FFFC90E1E7D47FA00152D56 /* ThirdLib（第三方框架） */,
+				1FFFC90F1E7D47FA00152D56 /* Tool（工具类） */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		1FFFC9081E7D47FA00152D56 /* Home */ = {
+		1FFFC9081E7D47FA00152D56 /* Home（主页模型） */ = {
 			isa = PBXGroup;
 			children = (
-				1FFFC9091E7D47FA00152D56 /* ChannelView */,
-				1FFFC90A1E7D47FA00152D56 /* Home */,
-				1FFFC90B1E7D47FA00152D56 /* NewDetail */,
-				1FFFC90C1E7D47FA00152D56 /* NewList */,
+				1FFFC90A1E7D47FA00152D56 /* Home（首页） */,
+				1FFFC9091E7D47FA00152D56 /* ChannelView（频道） */,
+				1FFFC90B1E7D47FA00152D56 /* NewDetail（详细页） */,
+				1FFFC90C1E7D47FA00152D56 /* NewList（新闻） */,
 			);
+			name = "Home（主页模型）";
 			path = Home;
 			sourceTree = "<group>";
 		};
-		1FFFC9091E7D47FA00152D56 /* ChannelView */ = {
+		1FFFC9091E7D47FA00152D56 /* ChannelView（频道） */ = {
 			isa = PBXGroup;
 			children = (
+				1FFFC9131E7D51AE00152D56 /* WYChannelController.h */,
+				1FFFC9141E7D51AE00152D56 /* WYChannelController.m */,
 			);
+			name = "ChannelView（频道）";
 			path = ChannelView;
 			sourceTree = "<group>";
 		};
-		1FFFC90A1E7D47FA00152D56 /* Home */ = {
+		1FFFC90A1E7D47FA00152D56 /* Home（首页） */ = {
 			isa = PBXGroup;
 			children = (
+				1FFFC91F1E7D5A0800152D56 /* Controller */,
+				1FFFC9201E7D5A0800152D56 /* Model */,
+				1FFFC9211E7D5A0800152D56 /* Other */,
+				1FFFC9221E7D5A0800152D56 /* View */,
 			);
+			name = "Home（首页）";
 			path = Home;
 			sourceTree = "<group>";
 		};
-		1FFFC90B1E7D47FA00152D56 /* NewDetail */ = {
+		1FFFC90B1E7D47FA00152D56 /* NewDetail（详细页） */ = {
 			isa = PBXGroup;
 			children = (
+				1FFFC9191E7D51CD00152D56 /* WYDetailController.h */,
+				1FFFC91A1E7D51CD00152D56 /* WYDetailController.m */,
 			);
+			name = "NewDetail（详细页）";
 			path = NewDetail;
 			sourceTree = "<group>";
 		};
-		1FFFC90C1E7D47FA00152D56 /* NewList */ = {
+		1FFFC90C1E7D47FA00152D56 /* NewList（新闻） */ = {
 			isa = PBXGroup;
 			children = (
+				1FFFC91C1E7D51E000152D56 /* WYNewsListController.h */,
+				1FFFC91D1E7D51E000152D56 /* WYNewsListController.m */,
 			);
+			name = "NewList（新闻）";
 			path = NewList;
 			sourceTree = "<group>";
 		};
-		1FFFC90D1E7D47FA00152D56 /* Main */ = {
+		1FFFC90D1E7D47FA00152D56 /* Main（主框架） */ = {
 			isa = PBXGroup;
 			children = (
+				1FFFC9101E7D504D00152D56 /* WYMainViewController.h */,
+				1FFFC9111E7D504D00152D56 /* WYMainViewController.m */,
 			);
+			name = "Main（主框架）";
 			path = Main;
 			sourceTree = "<group>";
 		};
-		1FFFC90E1E7D47FA00152D56 /* ThirdLib */ = {
+		1FFFC90E1E7D47FA00152D56 /* ThirdLib（第三方框架） */ = {
 			isa = PBXGroup;
 			children = (
 			);
+			name = "ThirdLib（第三方框架）";
 			path = ThirdLib;
 			sourceTree = "<group>";
 		};
-		1FFFC90F1E7D47FA00152D56 /* Tool */ = {
+		1FFFC90F1E7D47FA00152D56 /* Tool（工具类） */ = {
 			isa = PBXGroup;
 			children = (
 			);
+			name = "Tool（工具类）";
 			path = Tool;
+			sourceTree = "<group>";
+		};
+		1FFFC91F1E7D5A0800152D56 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1FFFC9161E7D51BE00152D56 /* WYHomeController.h */,
+				1FFFC9171E7D51BE00152D56 /* WYHomeController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1FFFC9201E7D5A0800152D56 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1FFFC9211E7D5A0800152D56 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		1FFFC9221E7D5A0800152D56 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		F8CACE598116DF775CC9879D /* Frameworks */ = {
@@ -292,8 +357,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1FFFC91B1E7D51CD00152D56 /* WYDetailController.m in Sources */,
+				1FFFC9181E7D51BE00152D56 /* WYHomeController.m in Sources */,
+				1FFFC9121E7D504D00152D56 /* WYMainViewController.m in Sources */,
+				1FFFC9151E7D51AE00152D56 /* WYChannelController.m in Sources */,
 				1FFFC8F51E7D0A3A00152D56 /* AppDelegate.m in Sources */,
 				1FFFC8F21E7D0A3A00152D56 /* main.m in Sources */,
+				1FFFC91E1E7D51E000152D56 /* WYNewsListController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
