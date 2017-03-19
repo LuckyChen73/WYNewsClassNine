@@ -19,8 +19,9 @@
 {
     if (self = [super init]) {
         
-        _index = index;
+        self.index = index;
         _model = model;
+        
     }
     
     
@@ -35,20 +36,20 @@
     self.view.backgroundColor = [UIColor colorWithRed:((float)arc4random_uniform(256) / 255.0) green:((float)arc4random_uniform(256) / 255.0) blue:((float)arc4random_uniform(256) / 255.0) alpha:1.0];
     
     //添加调试标签
-    UILabel *debugLab = [[UILabel alloc]init];
-    
-    debugLab.textColor = [UIColor whiteColor];
-    
-    debugLab.text = [NSString stringWithFormat:@"第 %zd 页  %@",_index,_model.tname];
-    
-    [self.view addSubview:debugLab];
-    
-    [debugLab mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.centerX.offset(0);
-        make.centerY.offset(0);
-        
-        make.size.mas_offset(CGSizeMake(100, 40));
-    }];
+//    UILabel *debugLab = [[UILabel alloc]init];
+//    
+//    debugLab.textColor = [UIColor whiteColor];
+//    
+//    debugLab.text = [NSString stringWithFormat:@"第 %zd 页  %@",_index,_model.tname];
+//    
+//    [self.view addSubview:debugLab];
+//    
+//    [debugLab mas_makeConstraints:^(MASConstraintMaker *make) {
+//        make.centerX.offset(0);
+//        make.centerY.offset(0);
+//        
+//        make.size.mas_offset(CGSizeMake(100, 40));
+//    }];
 
     
 }

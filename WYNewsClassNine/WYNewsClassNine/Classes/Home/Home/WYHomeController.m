@@ -11,7 +11,7 @@
 #import "WYChannelView.h"
 #import "WYNewsListController.h"
 
-@interface WYHomeController ()<UIPageViewControllerDataSource,WYChannelViewDelegate>
+@interface WYHomeController ()<UIPageViewControllerDataSource,WYChannelViewDelegate,UIPageViewControllerDelegate>
 
 @property (nonatomic, weak) WYChannelView *channelView;
 
@@ -44,7 +44,7 @@
     WYChannelView *view = [[WYChannelView alloc]init];
     
     //设置代理
-    view.delegate = self;
+    view.channelDelegate = self;
     
     _channelView = view;
     
@@ -113,7 +113,43 @@
     
     //4.实现数据源
     _pageVC.dataSource = self;
+    _pageVC.delegate = self;
     
+}
+
+#pragma mark - UIPageViewController的代理方法
+
+/**
+ pageViewController的子控制器将要滑动的时候调用
+
+ @param pageViewController 当前控制器
+ @param pendingViewControllers 将要跳转到的子控制器数组
+ */
+- (void)pageViewController:(UIPageViewController *)pageViewController willTransitionToViewControllers:(NSArray<UIViewController *> *)pendingViewControllers
+{
+    //1.获取将要跳转的子控制器
+    WYNewsListController *newsVC = (WYNewsListController*)pendingViewControllers[0];
+    
+    //把将要跳转的子控制器的下标赋给标签视图的选中下标
+    _channelView.isSelectedIndex = newsVC.index;
+    
+}
+
+
+/**
+ 已经完成动画的时候来调用
+
+ @param pageViewController 当前控制器
+ @param finished 是否完成动画
+ @param previousViewControllers 保存之前控制器的数组
+ @param completed 滑动完成
+ */
+- (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray<UIViewController *> *)previousViewControllers transitionCompleted:(BOOL)completed
+{
+    //1.获取当前的子控制器
+    WYNewsListController *newsVC = (WYNewsListController *)_pageVC.viewControllers[0];
+    //把将要当前的子控制器的下标赋给标签视图的选中下标
+    _channelView.isSelectedIndex = newsVC.index;
     
 }
 
@@ -133,8 +169,10 @@
     if (viewController.index == 0) {
         return nil;
     }
-    
-    WYNewsListController *newsVC = [[WYNewsListController alloc] init];
+    //取到当前控制器的下标减1，的到前一个控制器的下标
+    NSInteger index = viewController.index - 1;
+    //创建前一个控制器并初始化，把下标赋值
+    WYNewsListController *newsVC = [[WYNewsListController alloc] initWithIndex:index withChannelModel:_channelView.modelArr[index]];
     
     return newsVC;
 }
@@ -155,7 +193,10 @@
         return nil;
     }
     
-    WYNewsListController *newsVC = [[WYNewsListController alloc] init];
+    NSInteger index = viewController.index + 1;
+    
+    WYNewsListController *newsVC = [[WYNewsListController alloc] initWithIndex:index withChannelModel:_channelView.modelArr[index]];
+    
     return newsVC;
     
 }

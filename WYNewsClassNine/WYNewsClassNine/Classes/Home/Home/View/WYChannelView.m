@@ -71,11 +71,14 @@ const int baseTag = 6866;
         //每创建一个 lab，origin 的 x 就改为下一个 lab 的 origin
         originX += lab.bounds.size.width;
         
-        idx++;
+        idx += 1;
         
         [self addSubview:lab];
         
     }
+    
+    //将第0个设为高亮，在项目启动时
+    [self setIsSelectedIndex:0];
     
     //设置频道视图的 contentSize
     self.contentSize = CGSizeMake(originX, 40);
@@ -93,8 +96,8 @@ const int baseTag = 6866;
     [self setIsSelectedIndex:index];
     
     //判断代理是否实现代理方法
-    if ([self.delegate respondsToSelector:@selector(channelView:)]) {
-        [self.delegate channelView:index];
+    if ([self.channelDelegate respondsToSelector:@selector(channelView:)]) {
+        [self.channelDelegate channelView:index];
     }
     
     
@@ -104,6 +107,7 @@ const int baseTag = 6866;
 
 - (void)setIsSelectedIndex:(NSInteger)isSelectedIndex
 {
+    NSLog(@"------%zd",isSelectedIndex);
     
     //通过下标拿到标签
     WYLabel *selectLab = [self viewWithTag:_isSelectedIndex + baseTag];
@@ -119,7 +123,7 @@ const int baseTag = 6866;
     
     //如果选中高亮的 lab 超出屏幕，则让它滚动到可视区域
     CGFloat originX = willSelectLab.frame.origin.x;
-    CGFloat rightX = willSelectLab.frame.origin.x + willSelectLab.bounds.size.width;
+    CGFloat rightX = willSelectLab.frame.origin.x + willSelectLab.frame.size.width;
     
     if (originX < self.contentOffset.x || rightX > self.contentOffset.x) {
         

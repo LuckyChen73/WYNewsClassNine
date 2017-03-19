@@ -17,7 +17,7 @@
 
 @interface WYChannelView : UIScrollView
 
-@property (nonatomic, weak) id<WYChannelViewDelegate> delegate;
+@property (nonatomic, weak) id<WYChannelViewDelegate> channelDelegate;
 
 
 
