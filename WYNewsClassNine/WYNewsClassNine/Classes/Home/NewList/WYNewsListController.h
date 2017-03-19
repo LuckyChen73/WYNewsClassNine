@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WYChannelModel.h"
 
 @interface WYNewsListController : UIViewController
+
+@property (nonatomic, strong) WYChannelModel *model;
+
+@property (nonatomic, assign) NSInteger index;
+
+- (id)initWithIndex:(NSInteger)index withChannelModel:(WYChannelModel *)model;
+
 
 @end
