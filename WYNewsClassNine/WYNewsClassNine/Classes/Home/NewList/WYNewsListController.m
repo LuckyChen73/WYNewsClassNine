@@ -9,7 +9,7 @@
 #import "WYNewsListController.h"
 #import <Masonry.h>
 
-@interface WYNewsListController ()
+@interface WYNewsListController ()<UITableViewDataSource>
 
 @end
 
@@ -23,34 +23,58 @@
         _model = model;
         
     }
-    
-    
     return self;
-    
 }
-
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor colorWithRed:((float)arc4random_uniform(256) / 255.0) green:((float)arc4random_uniform(256) / 255.0) blue:((float)arc4random_uniform(256) / 255.0) alpha:1.0];
+    self.view.backgroundColor = [UIColor whiteColor];
     
-    //添加调试标签
-//    UILabel *debugLab = [[UILabel alloc]init];
-//    
-//    debugLab.textColor = [UIColor whiteColor];
-//    
-//    debugLab.text = [NSString stringWithFormat:@"第 %zd 页  %@",_index,_model.tname];
-//    
-//    [self.view addSubview:debugLab];
-//    
-//    [debugLab mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.centerX.offset(0);
-//        make.centerY.offset(0);
-//        
-//        make.size.mas_offset(CGSizeMake(100, 40));
-//    }];
+    [self addTableView];
+}
 
+#pragma mark - 添加 tableView
+- (void)addTableView
+{
+    UITableView *tabV = [[UITableView alloc] init];
+    tabV.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:tabV];
+    [tabV mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.right.offset(0);
+        make.top.offset(0);
+        make.bottom.offset(0);
+    }];
+    
+    tabV.dataSource = self;
+    
+    [tabV registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+    
+}
+
+
+
+#pragma mark - 数据源方法
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 20;
+    
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    cell.textLabel.text = indexPath.description;
+    return cell;
+}
+
+
+#pragma mark - 加载数据
+- (void)loadData
+{
+    
+    
     
 }
 
@@ -58,22 +82,5 @@
 
 
 
-
-
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

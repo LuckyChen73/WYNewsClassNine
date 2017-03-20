@@ -50,7 +50,7 @@
     //创建类
     UIViewController *vc = [[cls alloc] init];
     
-    vc.view.backgroundColor = [UIColor colorWithRed:((float)arc4random_uniform(256) / 255.0) green:((float)arc4random_uniform(256) / 255.0) blue:((float)arc4random_uniform(256) / 255.0) alpha:1.0];
+    vc.view.backgroundColor = [UIColor whiteColor];
     
     //设置控制器属性
     vc.title = dic[@"title"];
