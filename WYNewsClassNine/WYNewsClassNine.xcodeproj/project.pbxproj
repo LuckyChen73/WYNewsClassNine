@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1FFE9D631E7F6293002131AD /* WYNewsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFE9D621E7F6293002131AD /* WYNewsModel.m */; };
 		1FFFC8F21E7D0A3A00152D56 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFFC8F11E7D0A3A00152D56 /* main.m */; };
 		1FFFC8F51E7D0A3A00152D56 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1FFFC8F41E7D0A3A00152D56 /* AppDelegate.m */; };
 		1FFFC8FB1E7D0A3A00152D56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FFFC8F91E7D0A3A00152D56 /* Main.storyboard */; };
@@ -25,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1FFE9D611E7F6293002131AD /* WYNewsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYNewsModel.h; sourceTree = "<group>"; };
+		1FFE9D621E7F6293002131AD /* WYNewsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYNewsModel.m; sourceTree = "<group>"; };
 		1FFFC8ED1E7D0A3A00152D56 /* WYNewsClassNine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WYNewsClassNine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FFFC8F11E7D0A3A00152D56 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1FFFC8F31E7D0A3A00152D56 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -177,6 +180,8 @@
 			children = (
 				1FFFC91C1E7D51E000152D56 /* WYNewsListController.h */,
 				1FFFC91D1E7D51E000152D56 /* WYNewsListController.m */,
+				1FFE9D611E7F6293002131AD /* WYNewsModel.h */,
+				1FFE9D621E7F6293002131AD /* WYNewsModel.m */,
 			);
 			name = "NewList（新闻）";
 			path = NewList;
@@ -383,6 +388,7 @@
 				1FFFC92D1E7D5F6000152D56 /* WYLabel.m in Sources */,
 				1FFFC9151E7D51AE00152D56 /* WYChannelController.m in Sources */,
 				1FFFC8F51E7D0A3A00152D56 /* AppDelegate.m in Sources */,
+				1FFE9D631E7F6293002131AD /* WYNewsModel.m in Sources */,
 				1FFFC8F21E7D0A3A00152D56 /* main.m in Sources */,
 				1FFFC9251E7D5AF000152D56 /* WYChannelView.m in Sources */,
 				1FFFC91E1E7D51E000152D56 /* WYNewsListController.m in Sources */,

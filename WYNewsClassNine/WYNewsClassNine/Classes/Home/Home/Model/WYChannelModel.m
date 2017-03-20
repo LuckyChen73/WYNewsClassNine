@@ -26,6 +26,11 @@
     //把字典数组转成模型数组
     NSArray *modelArr = [NSArray yy_modelArrayWithClass:[WYChannelModel class] json:dicArr];
     
+    //对 json 数据数组进行排序
+    modelArr = [modelArr sortedArrayUsingComparator:^NSComparisonResult(WYChannelModel * obj1, WYChannelModel *obj2) {
+        return [obj1.tid compare:obj2.tid];
+    }];
+    
     return modelArr;
 }
 
