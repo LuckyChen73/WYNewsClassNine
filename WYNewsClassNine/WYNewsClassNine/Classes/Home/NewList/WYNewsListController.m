@@ -8,12 +8,19 @@
 
 #import "WYNewsListController.h"
 #import <Masonry.h>
+#import "WYNewsNormalCell.h"
 
 @interface WYNewsListController ()<UITableViewDataSource>
 
 @end
+//重用标识
+static NSString *normalCellID = @"normalCellID";
+
 
 @implementation WYNewsListController
+
+
+
 
 - (instancetype)initWithIndex:(NSInteger)index withChannelModel:(WYChannelModel *)model
 {
@@ -37,6 +44,7 @@
 #pragma mark - 添加 tableView
 - (void)addTableView
 {
+    //创建tabView
     UITableView *tabV = [[UITableView alloc] init];
     tabV.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:tabV];
@@ -46,9 +54,15 @@
         make.bottom.offset(0);
     }];
     
+    //设置数据源
     tabV.dataSource = self;
     
-    [tabV registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+    //注册 cell
+    [tabV registerClass:[WYNewsNormalCell class] forCellReuseIdentifier:normalCellID];
+    
+    //设置 tabView 的行高
+    tabV.estimatedRowHeight = 200;
+    tabV.rowHeight = UITableViewAutomaticDimension;
     
 }
 
@@ -64,9 +78,10 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
-    cell.textLabel.text = indexPath.description;
-    return cell;
+    WYNewsNormalCell *normalCell = [tableView dequeueReusableCellWithIdentifier:normalCellID forIndexPath:indexPath];
+    
+    
+    return normalCell;
 }
 
 
