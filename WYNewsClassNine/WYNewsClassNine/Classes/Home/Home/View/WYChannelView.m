@@ -107,7 +107,6 @@ const int baseTag = 6866;
 
 - (void)setIsSelectedIndex:(NSInteger)isSelectedIndex
 {
-    NSLog(@"------%zd",isSelectedIndex);
     
     //通过下标拿到标签
     WYLabel *selectLab = [self viewWithTag:_isSelectedIndex + baseTag];

@@ -10,6 +10,9 @@
 #import <Masonry.h>
 #import "WYNewsNormalCell.h"
 #import "WYNetworkTool+news.h"
+#import "WYNewsHeadCell.h"
+#import "WYBigImageCell.h"
+#import "WYThreeImageCell.h"
 
 @interface WYNewsListController ()<UITableViewDataSource>
 
@@ -20,8 +23,9 @@
 @end
 //重用标识
 static NSString *normalCellID = @"normalCellID";
-static NSString *bigImageCellID = @"normalCellID";
-static NSString *newsHeadCellID = @"normalCellID";
+static NSString *bigImageCellID = @"bigImageCellID";
+static NSString *newsHeadCellID = @"newsHeadCellID";
+static NSString *imgExtraCellID = @"imgExtraCellID";
 
 @implementation WYNewsListController
 
@@ -31,6 +35,8 @@ static NSString *newsHeadCellID = @"normalCellID";
         
         self.index = index;
         _model = model;
+        
+        _modelArrM = [NSMutableArray array];
         
     }
     return self;
@@ -42,6 +48,9 @@ static NSString *newsHeadCellID = @"normalCellID";
     self.view.backgroundColor = [UIColor whiteColor];
     
     [self addTableView];
+    
+    [self loadData];
+    
 }
 
 #pragma mark - 添加 tableView
@@ -68,9 +77,11 @@ static NSString *newsHeadCellID = @"normalCellID";
     UINib *bigNib = [UINib nibWithNibName:@"WYBigImageCell" bundle:nil];
     [tabV registerNib:bigNib forCellReuseIdentifier:bigImageCellID];
     
-    UINib *newsNib = [UINib nibWithNibName:@"WYNewsHeadCell" bundle:nil];
-    [tabV registerNib:newsNib forCellReuseIdentifier:newsHeadCellID];
+    UINib *headNib = [UINib nibWithNibName:@"WYNewsHeadCell" bundle:nil];
+    [tabV registerNib:headNib forCellReuseIdentifier:newsHeadCellID];
     
+    UINib *extraNib = [UINib nibWithNibName:@"WYThreeImageCell" bundle:nil];
+    [tabV registerNib:extraNib forCellReuseIdentifier:imgExtraCellID];
     
     //设置 tabView 的行高
     tabV.estimatedRowHeight = 200;
@@ -78,6 +89,7 @@ static NSString *newsHeadCellID = @"normalCellID";
  
     //记录
     _tabV = tabV;
+    
     
 }
 
@@ -93,20 +105,38 @@ static NSString *newsHeadCellID = @"normalCellID";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    //拿到模型
+    WYNewsModel *model = _modelArrM[indexPath.row];
+    //是否是头部 cell
+    if (model.hasHead) {
+        
+         WYNewsHeadCell *newsHeadCell = [tableView dequeueReusableCellWithIdentifier:newsHeadCellID forIndexPath:indexPath];
+        newsHeadCell.newsModel = model;
+        
+        return newsHeadCell;
+     //是否是大图
+    }else if(model.imgType) {
     
-//    if (indexPath.row == 0) {
-//        
-//        WYNewsNormalCell *newsHeadCell = [tableView dequeueReusableCellWithIdentifier:newsHeadCellID forIndexPath:indexPath];
-//        
-//        return newsHeadCell;
-//    }else {
+        WYBigImageCell *bigImgCell = [tableView dequeueReusableCellWithIdentifier:bigImageCellID forIndexPath:indexPath];
+        bigImgCell.newsModel = model;
+        
+        return bigImgCell;
+    //是否是三张图
+    }else if(model.imgExtra != nil) {
+        
+        WYThreeImageCell *imgExtraCell = [tableView dequeueReusableCellWithIdentifier:imgExtraCellID forIndexPath:indexPath];
+        imgExtraCell.newsModel = model;
+        
+        return imgExtraCell;
+        
+    }
     
+    //普通 cell
+    WYNewsNormalCell * normalCell = [tableView dequeueReusableCellWithIdentifier:normalCellID forIndexPath:indexPath];
     
-        WYNewsNormalCell * normalCell = [tableView dequeueReusableCellWithIdentifier:normalCellID forIndexPath:indexPath];
+    normalCell.newsModel = _modelArrM[indexPath.row];
     
-    
-        return normalCell;
-//    }
+    return normalCell;
 }
 
 
@@ -114,7 +144,7 @@ static NSString *newsHeadCellID = @"normalCellID";
 - (void)loadData
 {
     [[WYNetworkTool sharedTool]requestNewsListWithTid:_model.tid withCallBack:^(NSArray *modelArr) {
-       
+        
         [_modelArrM addObjectsFromArray:modelArr];
         //刷新界面
         [_tabV reloadData];

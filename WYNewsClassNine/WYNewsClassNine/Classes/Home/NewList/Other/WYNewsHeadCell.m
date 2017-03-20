@@ -7,6 +7,7 @@
 //
 
 #import "WYNewsHeadCell.h"
+#import <UIImageView+WebCache.h>
 
 @interface WYNewsHeadCell ()
 
@@ -21,9 +22,23 @@
 
 @implementation WYNewsHeadCell
 
+- (void)setNewsModel:(WYNewsModel *)newsModel
+{
+    _newsModel = newsModel;
+    
+    [_bigImgView sd_setImageWithURL:[NSURL URLWithString:newsModel.imgsrc]];
+    _titleLab.text = newsModel.title;
+    
+}
+
+
+
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
+    
+    
+    
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

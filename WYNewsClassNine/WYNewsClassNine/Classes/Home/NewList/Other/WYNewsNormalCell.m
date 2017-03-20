@@ -8,12 +8,24 @@
 
 #import "WYNewsNormalCell.h"
 #import <Masonry.h>
+#import <UIImageView+WebCache.h>
+
+@interface WYNewsNormalCell ()
+
+@property (nonatomic, strong) UIImageView *newsImage;
+@property (nonatomic, strong) UILabel *newsTitle;
+@property (nonatomic, strong) UILabel *source;
+@property (nonatomic, strong) UILabel *replyCount;
+
+
+@end
 
 @implementation WYNewsNormalCell
 
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+        
         [self setupUI];
     }
     return self;
@@ -79,6 +91,11 @@
         make.bottom.equalTo(imgV.mas_bottom).offset(0);
     }];
     
+    //记录
+    _newsImage = imgV;
+    _newsTitle = titleLab;
+    _source = sourceLab;
+    _replyCount = replyCountLab;
     
     
 }
@@ -87,8 +104,13 @@
 
 - (void)setNewsModel:(WYNewsModel *)newsModel
 {
+    _newsModel = newsModel;
     
-    
+    [_newsImage sd_setImageWithURL:[NSURL URLWithString:newsModel.imgsrc]];
+    _newsTitle.text = newsModel.title;
+    _source.text = newsModel.source;
+    _replyCount.text = newsModel.replyCount;
+
     
 }
 

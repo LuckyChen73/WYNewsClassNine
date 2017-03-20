@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WYNewsModel.h"
 
 @interface WYThreeImageCell : UITableViewCell
+
+@property (nonatomic, strong) WYNewsModel *newsModel;
 
 @end

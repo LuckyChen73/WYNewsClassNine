@@ -26,7 +26,8 @@
 //图片地址
 @property (nonatomic, copy) NSString *imgsrc;
 
-
+//是否是第一张图片的其余图片
+@property (nonatomic, strong) NSArray *imgExtra;
 
 
 

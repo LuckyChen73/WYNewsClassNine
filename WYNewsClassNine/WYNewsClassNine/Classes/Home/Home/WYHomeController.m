@@ -62,7 +62,7 @@
 - (void)channelView:(NSInteger)index
 {
     //点击标签获得
-    NSLog(@"%zd",index);
+//    NSLog(@"%zd",index);
     
     
     //1.获取当前子控制器的下标
@@ -106,7 +106,7 @@
     
     
     //3.添加子控制器
-    WYNewsListController *newsVC = [[WYNewsListController alloc] init];
+    WYNewsListController *newsVC = [[WYNewsListController alloc] initWithIndex:0 withChannelModel:_channelView.modelArr[0]];
     NSArray *controllers = @[newsVC];
     
     [_pageVC setViewControllers:controllers direction:UIPageViewControllerNavigationDirectionForward animated:YES completion:nil];

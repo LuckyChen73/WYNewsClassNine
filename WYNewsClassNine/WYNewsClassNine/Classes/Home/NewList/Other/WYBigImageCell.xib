@@ -15,7 +15,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="160"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="159.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="解放军三军仪仗队赴巴基斯坦为其国庆彩排" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wo5-vu-Jk5">
@@ -27,7 +27,7 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="about_hd" translatesAutoresizingMaskIntoConstraints="NO" id="u7i-YM-BE4">
                         <rect key="frame" x="6" y="30" width="308" height="100"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="100" id="ddD-I6-q9O"/>
+                            <constraint firstAttribute="height" constant="100" id="TPH-gQ-5NT"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="网易综合" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lj6-8Q-H6W">
@@ -44,17 +44,17 @@
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="u7i-YM-BE4" firstAttribute="leading" secondItem="wo5-vu-Jk5" secondAttribute="leading" id="0th-jm-GPt"/>
-                    <constraint firstItem="u7i-YM-BE4" firstAttribute="top" secondItem="wo5-vu-Jk5" secondAttribute="bottom" constant="6" id="9ms-Ra-WqO"/>
-                    <constraint firstItem="Lj6-8Q-H6W" firstAttribute="leading" secondItem="u7i-YM-BE4" secondAttribute="leading" id="LQY-qc-eH7"/>
-                    <constraint firstItem="wo5-vu-Jk5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="6" id="Mra-oi-Bev"/>
-                    <constraint firstAttribute="bottom" secondItem="Lj6-8Q-H6W" secondAttribute="bottom" constant="6" id="Ydz-kI-fZ0"/>
-                    <constraint firstAttribute="bottom" secondItem="kVT-Ou-pJo" secondAttribute="bottom" constant="6" id="c0G-Z4-4Ps"/>
-                    <constraint firstAttribute="trailing" secondItem="wo5-vu-Jk5" secondAttribute="trailing" constant="6" id="gKa-y4-7N4"/>
-                    <constraint firstItem="u7i-YM-BE4" firstAttribute="top" secondItem="wo5-vu-Jk5" secondAttribute="bottom" constant="6" id="lRq-sI-yP6"/>
-                    <constraint firstItem="wo5-vu-Jk5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="nX4-CY-f94"/>
-                    <constraint firstItem="kVT-Ou-pJo" firstAttribute="trailing" secondItem="u7i-YM-BE4" secondAttribute="trailing" id="pXb-14-5qd"/>
-                    <constraint firstItem="u7i-YM-BE4" firstAttribute="trailing" secondItem="wo5-vu-Jk5" secondAttribute="trailing" id="ur4-yO-bkw"/>
+                    <constraint firstAttribute="trailing" secondItem="wo5-vu-Jk5" secondAttribute="trailing" constant="6" id="3SQ-ZF-E5Y"/>
+                    <constraint firstItem="wo5-vu-Jk5" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="6" id="7yl-pP-Bh7"/>
+                    <constraint firstItem="wo5-vu-Jk5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="6" id="841-db-Ppw"/>
+                    <constraint firstAttribute="trailing" secondItem="kVT-Ou-pJo" secondAttribute="trailing" constant="6" id="AMx-fo-U7z"/>
+                    <constraint firstItem="u7i-YM-BE4" firstAttribute="top" secondItem="wo5-vu-Jk5" secondAttribute="bottom" constant="6" id="CDZ-fh-DDE"/>
+                    <constraint firstItem="kVT-Ou-pJo" firstAttribute="top" secondItem="u7i-YM-BE4" secondAttribute="bottom" constant="6" id="P7j-fS-iuw"/>
+                    <constraint firstItem="u7i-YM-BE4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="6" id="XlH-99-N6o"/>
+                    <constraint firstItem="Lj6-8Q-H6W" firstAttribute="top" secondItem="u7i-YM-BE4" secondAttribute="bottom" constant="6" id="Z53-Ph-6Uf"/>
+                    <constraint firstItem="Lj6-8Q-H6W" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="6" id="dmS-CS-ckx"/>
+                    <constraint firstAttribute="trailing" secondItem="u7i-YM-BE4" secondAttribute="trailing" constant="6" id="fHU-El-9CE"/>
+                    <constraint firstAttribute="bottom" secondItem="Lj6-8Q-H6W" secondAttribute="bottom" constant="6" id="mNJ-0r-l2k"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

@@ -7,6 +7,7 @@
 //
 
 #import "WYBigImageCell.h"
+#import <UIImageView+WebCache.h>
 
 @interface WYBigImageCell ()
 
@@ -31,9 +32,10 @@
 {
     _newsModel = newsModel;
     
-    
-    
-    
+    _titleLab.text = newsModel.title;
+    [_imgView sd_setImageWithURL:[NSURL URLWithString:newsModel.imgsrc]];
+    _sourceLab.text = newsModel.source;
+    _replyCountLab.text = newsModel.replyCount;
 }
 
 
