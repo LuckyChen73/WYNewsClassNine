@@ -13,8 +13,9 @@
 #import "WYNewsHeadCell.h"
 #import "WYBigImageCell.h"
 #import "WYThreeImageCell.h"
+#import "WYDetailController.h"
 
-@interface WYNewsListController ()<UITableViewDataSource>
+@interface WYNewsListController ()<UITableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic, strong) NSMutableArray *modelArrM;
 
@@ -71,6 +72,10 @@ static NSString *imgExtraCellID = @"imgExtraCellID";
     //设置数据源
     tabV.dataSource = self;
     
+    //设置代理
+    tabV.delegate = self;
+    
+    
     //注册 cell
     [tabV registerClass:[WYNewsNormalCell class] forCellReuseIdentifier:normalCellID];
     
@@ -89,6 +94,29 @@ static NSString *imgExtraCellID = @"imgExtraCellID";
  
     //记录
     _tabV = tabV;
+    
+    
+}
+
+#pragma mark - tabView代理方法
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //动画取消选中
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    //跳转到详情控制器
+    WYDetailController *detailVC = [[WYDetailController alloc]init];
+    
+    //根据下标取到对应的模型数据
+    WYNewsModel *model = _modelArrM[indexPath.row];
+    detailVC.newsModel = model;
+    
+    //隐藏标签栏
+    detailVC.hidesBottomBarWhenPushed = YES;
+    
+    [self.navigationController pushViewController:detailVC animated:YES];
+    
+    
     
     
 }

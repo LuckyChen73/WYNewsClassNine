@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WYNewsModel.h"
 
 @interface WYDetailController : UIViewController
+
+@property (nonatomic, strong) WYNewsModel *newsModel;
+
 
 @end

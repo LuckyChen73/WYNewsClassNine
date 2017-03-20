@@ -40,7 +40,7 @@
 - (void)requestNewsListWithDetail:(NSString *)docid withCallBack:(void (^)(NSString *))callBack
 {
     //把传进的 docid 与 url 字符串拼接
-    NSString *urlStr = [NSString stringWithFormat:@"http://c.m.163.com/nc/article/headline/%@/0-20.html",docid];
+    NSString *urlStr = [NSString stringWithFormat:@"http://c.m.163.com/nc/article/%@/full.html",docid];
     
     [[WYNetworkTool sharedTool] requestWithURL:urlStr withMethod:@"GET" withParameters:nil withCallBack:^(id response) {
         

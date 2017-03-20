@@ -7,8 +7,13 @@
 //
 
 #import "WYDetailController.h"
+#import "WYNetworkTool+news.h"
+
 
 @interface WYDetailController ()
+
+@property (nonatomic, strong) UIWebView *webView;
+
 
 @end
 
@@ -16,22 +21,44 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    self.view.backgroundColor = [UIColor whiteColor];
+    
+    //创建 webView
+    _webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
+    _webView.backgroundColor = [UIColor whiteColor];
+    
+    //调整 webView 的滑动速度
+    _webView.scrollView.decelerationRate = UIScrollViewDecelerationRateNormal;
+    
+    [self.view addSubview:_webView];
+    
+    //加载数据并显示
+    [self loadData];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+
+/**
+ 获取并加载数据
+ */
+- (void)loadData
+{
+    //获取详情页并展示
+    [[WYNetworkTool sharedTool] requestNewsListWithDetail:_newsModel.docid withCallBack:^(NSString *bodyStr) {
+        NSLog(@"@@@@@@@ :  %@",bodyStr);
+        //加载 html 字符串
+        [_webView loadHTMLString:bodyStr baseURL:nil];
+        
+        
+    }];
+    
+    
+    
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+
+
 
 @end
